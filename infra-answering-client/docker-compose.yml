@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  bot:
+    image: cianoid/tg-answering-client:latest
+    restart: always
+    volumes:
+      - logs_value:/app/logs/
+    env_file:
+      - ./.env
+
+volumes:
+  logs_value:
